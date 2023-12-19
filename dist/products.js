@@ -54,7 +54,7 @@ function analyzePrices() {
         var sdPrice = standardDeviation(products_1.map(function (p) { return p.price; }));
         var resultDiv = document.getElementById('productAnalysisResult');
         if (resultDiv) {
-            resultDiv.innerHTML = "\n                <p>Cheapest Product: ".concat(cheapestProduct, "</p>\n                <p>Mean Price: ").concat(meanPrice.toFixed(2), "</p>\n                <p>Standard Deviation of Prices: ").concat(sdPrice.toFixed(2), "</p>\n            ");
+            resultDiv.textContent = "Cheapest Product: ".concat(cheapestProduct, ", Mean Price: ").concat(meanPrice.toFixed(2), ", Standard Deviation of Prices: ").concat(sdPrice.toFixed(2));
         }
     }
     catch (error) {

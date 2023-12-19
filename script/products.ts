@@ -75,11 +75,7 @@ function analyzePrices(): void {
 
         const resultDiv = document.getElementById('productAnalysisResult');
         if (resultDiv) {
-            resultDiv.innerHTML = `
-                <p>Cheapest Product: ${cheapestProduct}</p>
-                <p>Mean Price: ${meanPrice.toFixed(2)}</p>
-                <p>Standard Deviation of Prices: ${sdPrice.toFixed(2)}</p>
-            `;
+            resultDiv.textContent = `Cheapest Product: ${cheapestProduct}, Mean Price: ${meanPrice.toFixed(2)}, Standard Deviation of Prices: ${sdPrice.toFixed(2)}`;
         }
     } catch (error) {
         console.error('Error analyzing prices:', error);
@@ -89,6 +85,7 @@ function analyzePrices(): void {
         }
     }
 }
+
 
 function standardDeviation(values: number[]): number {
     const mean = values.reduce((sum, value) => sum + value, 0) / values.length;

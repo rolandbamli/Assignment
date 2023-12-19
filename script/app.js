@@ -1,5 +1,3 @@
-console.log("Üdvözöllek a weboldalamon!");
-
 function toggleVisibility(DIV_to_hide) {
     var x = document.getElementById(DIV_to_hide);
     if (x.style.display === "none") {
